@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stellar Informatics Pvt. Ltd.</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      color: #333;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .input-field.error {
+      border-color: red;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .links {
+      margin-bottom: 20px;
+    }
+
+    .links h2 {
+      margin-top: 0;
+    }
+
+    .links .form-group {
+      margin-bottom: 10px;
+    }
+
+    .dgs-question {
+      margin-bottom: 20px;
+    }
+
+    .dgs-question h2 {
+      margin-top: 0;
+    }
+
+    .dgs-question .form-group {
+      margin-bottom: 10px;
+    }
+
+    .additional-info {
+      margin-bottom: 20px;
+    }
+
+    .additional-info textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+    .apply-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      padding: 10px 20px;
+    }
+
+    .apply-button:hover {
+      background-color: #0056b3;
+    }
+
+    .attach-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      padding: 10px 20px;
+    }
+
+    .attach-button:hover {
+      background-color: #0056b3;
+    }
+
+    .linkedin-note {
+      color: #6c757d;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .confirmation-page {
+      display: none;
+      text-align: center;
+      padding: 50px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 100px auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Software Engineer - Backend</h1>
+    <p>Stellar Informatics Pvt. Ltd. - Software Engineer (Fresher) / Full-Time / On-site</p>
+
+    <h2>SUBMIT YOUR APPLICATION</h2>
+    <div class="form-group">
+      <label class="label">LinkedIn profile</label>
+      <input type="text" class="input-field" id="linkedin-profile">
+    </div>
+    <div class="form-group">
+      <label class="label">Resume/CV *</label>
+      <button class="attach-button"><input type="file" id="resume"></button>
+    </div>
+    <div class="form-group">
+      <label class="label">Full name *</label>
+      <input type="text" class="input-field" id="full-name">
+    </div>
+    <div class="form-group">
+      <label class="label">Email *</label>
+      <input type="email" class="input-field" id="email">
+    </div>
+    <div class="form-group">
+      <label class="label">Phone *</label>
+      <input type="tel" class="input-field" id="phone">
+    </div>
+    <div class="form-group">
+      <label class="label">Current location *</label>
+      <input type="text" class="input-field" id="current-location">
+    </div>
+    <div class="form-group">
+      <label class="label">Current company *</label>
+      <input type="text" class="input-field" id="current-company">
+    </div>
+
+    <h2>LINKS</h2>
+    <div class="links">
+      <div class="form-group">
+        <label class="label">LinkedIn URL</label>
+        <input type="text" class="input-field" id="linkedin-url">
+      </div>
+      <div class="form-group">
+        <label class="label">GitHub URL</label>
+        <input type="text" class="input-field" id="github-url">
+      </div>
+      <div class="form-group">
+        <label class="label">Portfolio URL</label>
+        <input type="text" class="input-field" id="portfolio-url">
+      </div>
+      <div class="form-group">
+        <label class="label">Other website</label>
+        <input type="text" class="input-field" id="other-website">
+      </div>
+    </div>
+
+    <h2>DGS - HIRING QUESTION</h2>
+    <div class="dgs-question">
+      <div class="form-group">
+        <label class="label">Total Experience *</label>
+        <input type="text" class="input-field" id="total-experience">
+      </div>
+      <div class="form-group">
+        <label class="label">Current Location *</label>
+        <input type="text" class="input-field" id="dgs-current-location">
+      </div>
+      <div class="form-group">
+        <label class="label">Work Location *</label>
+        <input type="text" class="input-field" id="work-location">
+      </div>
+      <div class="form-group">
+        <label class="label">Current Organization *</label>
+        <input type="text" class="input-field" id="current-organization">
+      </div>
+      <div class="form-group">
+        <label class="label">Current CTC *</label>
+        <input type="text" class="input-field" id="current-ctc">
+      </div>
+      <div class="form-group">
+        <label class="label">Expected CTC *</label>
+        <input type="text" class="input-field" id="expected-ctc">
+      </div>
+      <div class="form-group">
+        <label class="label">Notice Period *</label>
+        <input type="text" class="input-field" id="notice-period">
+      </div>
+      <div class="form-group">
+        <label class="label">Willing to relocate to Pune *</label>
+        <input type="text" class="input-field" id="relocate">
+      </div>
+    </div>
+
+    <h2>ADDITIONAL INFORMATION</h2>
+    <div class="additional-info">
+      <textarea id="additional-info" placeholder="Add a cover letter or anything else you want to share."></textarea>
+    </div>
+
+    <button class="apply-button" id="submit-button">SUBMIT APPLICATION</button>
+    <button class="apply-button">APPLY WITH LINKEDIN</button>
+    <div class="linkedin-note">Your full LinkedIn profile will be shared with us.</div>
+  </div>
+
+  <div class="confirmation-page" id="confirmation-page">
+    <h2>Application Submitted</h2>
+    <p>Thank you for your application! We will review your information and get back to you soon.</p>
+  </div>
+
+  <script>
+    // Function to validate required fields and show the confirmation page
+    document.getElementById('submit-button').addEventListener('click', function(event) {
+      event.preventDefault();
+
+      // List of required fields
+      var requiredFields = [
+        'resume', 'full-name', 'email', 'phone', 'current-location', 'current-company',
+        'total-experience', 'dgs-current-location', 'work-location',
+        'current-organization', 'current-ctc', 'expected-ctc',
+        'notice-period', 'relocate'
+      ];
+
+      // Flag to track if all required fields are filled
+      var allFilled = true;
+
+      // Validate required fields
+      requiredFields.forEach(function(id) {
+        var field = document.getElementById(id);
+        if (!field.value) {
+          field.classList.add('error');
+          allFilled = false;
+        } else {
+          field.classList.remove('error');
+        }
+      });
+
+      if (!allFilled) {
+        alert('Please fill in all required fields marked with *.');
+        return;
+      }
+
+      // Hide the form and show the confirmation page
+      document.querySelector('.container').style.display = 'none';
+      document.getElementById('confirmation-page').style.display = 'block';
+    });
+
+    // Remove error class on input
+    var inputFields = document.querySelectorAll('.input-field');
+    inputFields.forEach(function(field) {
+      field.addEventListener('input', function() {
+        if (field.value) {
+          field.classList.remove('error');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

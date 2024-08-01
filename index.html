@@ -12,11 +12,12 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 100%;
       margin: 0 auto;
       padding: 20px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
     }
 
     h1 {
@@ -27,10 +28,11 @@
 
     h2 {
       color: #333;
+      margin-bottom: 10px;
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .label {
@@ -68,69 +70,27 @@
       background-color: #0056b3;
     }
 
-    .links {
-      margin-bottom: 20px;
-    }
-
-    .links h2 {
-      margin-top: 0;
-    }
-
-    .links .form-group {
-      margin-bottom: 10px;
-    }
-
-    .dgs-question {
-      margin-bottom: 20px;
-    }
-
-    .dgs-question h2 {
-      margin-top: 0;
-    }
-
-    .dgs-question .form-group {
-      margin-bottom: 10px;
-    }
-
-    .additional-info {
-      margin-bottom: 20px;
-    }
-
-    .additional-info textarea {
+    .attach-button {
+      display: block;
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-    }
-
-    .apply-button {
       background-color: #007bff;
       color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      padding: 10px 20px;
+      position: relative;
     }
 
-    .apply-button:hover {
-      background-color: #0056b3;
-    }
-
-    .attach-button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
+    .attach-button input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      padding: 10px 20px;
-    }
-
-    .attach-button:hover {
-      background-color: #0056b3;
     }
 
     .linkedin-note {
@@ -149,6 +109,33 @@
       margin: 100px auto;
       border-radius: 10px;
     }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      .input-field, .button, .attach-button {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .input-field.error {
+        border-color: red;
+      }
+
+      .linkedin-note {
+        font-size: 10px;
+      }
+
+      .confirmation-page {
+        padding: 30px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -163,7 +150,7 @@
     </div>
     <div class="form-group">
       <label class="label">Resume/CV *</label>
-      <button class="attach-button"><input type="file" id="resume"></button>
+      <input type="file" class="input-field" id="resume"></button>
     </div>
     <div class="form-group">
       <label class="label">Full name *</label>
@@ -187,68 +174,64 @@
     </div>
 
     <h2>LINKS</h2>
-    <div class="links">
-      <div class="form-group">
-        <label class="label">LinkedIn URL</label>
-        <input type="text" class="input-field" id="linkedin-url">
-      </div>
-      <div class="form-group">
-        <label class="label">GitHub URL</label>
-        <input type="text" class="input-field" id="github-url">
-      </div>
-      <div class="form-group">
-        <label class="label">Portfolio URL</label>
-        <input type="text" class="input-field" id="portfolio-url">
-      </div>
-      <div class="form-group">
-        <label class="label">Other website</label>
-        <input type="text" class="input-field" id="other-website">
-      </div>
+    <div class="form-group">
+      <label class="label">LinkedIn URL</label>
+      <input type="text" class="input-field" id="linkedin-url">
+    </div>
+    <div class="form-group">
+      <label class="label">GitHub URL</label>
+      <input type="text" class="input-field" id="github-url">
+    </div>
+    <div class="form-group">
+      <label class="label">Portfolio URL</label>
+      <input type="text" class="input-field" id="portfolio-url">
+    </div>
+    <div class="form-group">
+      <label class="label">Other website</label>
+      <input type="text" class="input-field" id="other-website">
     </div>
 
     <h2>DGS - HIRING QUESTION</h2>
-    <div class="dgs-question">
-      <div class="form-group">
-        <label class="label">Total Experience *</label>
-        <input type="text" class="input-field" id="total-experience">
-      </div>
-      <div class="form-group">
-        <label class="label">Current Location *</label>
-        <input type="text" class="input-field" id="dgs-current-location">
-      </div>
-      <div class="form-group">
-        <label class="label">Work Location *</label>
-        <input type="text" class="input-field" id="work-location">
-      </div>
-      <div class="form-group">
-        <label class="label">Current Organization *</label>
-        <input type="text" class="input-field" id="current-organization">
-      </div>
-      <div class="form-group">
-        <label class="label">Current CTC *</label>
-        <input type="text" class="input-field" id="current-ctc">
-      </div>
-      <div class="form-group">
-        <label class="label">Expected CTC *</label>
-        <input type="text" class="input-field" id="expected-ctc">
-      </div>
-      <div class="form-group">
-        <label class="label">Notice Period *</label>
-        <input type="text" class="input-field" id="notice-period">
-      </div>
-      <div class="form-group">
-        <label class="label">Willing to relocate to Pune *</label>
-        <input type="text" class="input-field" id="relocate">
-      </div>
+    <div class="form-group">
+      <label class="label">Total Experience *</label>
+      <input type="text" class="input-field" id="total-experience">
+    </div>
+    <div class="form-group">
+      <label class="label">Current Location *</label>
+      <input type="text" class="input-field" id="dgs-current-location">
+    </div>
+    <div class="form-group">
+      <label class="label">Work Location *</label>
+      <input type="text" class="input-field" id="work-location">
+    </div>
+    <div class="form-group">
+      <label class="label">Current Organization *</label>
+      <input type="text" class="input-field" id="current-organization">
+    </div>
+    <div class="form-group">
+      <label class="label">Current CTC *</label>
+      <input type="text" class="input-field" id="current-ctc">
+    </div>
+    <div class="form-group">
+      <label class="label">Expected CTC *</label>
+      <input type="text" class="input-field" id="expected-ctc">
+    </div>
+    <div class="form-group">
+      <label class="label">Notice Period *</label>
+      <input type="text" class="input-field" id="notice-period">
+    </div>
+    <div class="form-group">
+      <label class="label">Willing to relocate to Pune *</label>
+      <input type="text" class="input-field" id="relocate">
     </div>
 
     <h2>ADDITIONAL INFORMATION</h2>
-    <div class="additional-info">
-      <textarea id="additional-info" placeholder="Add a cover letter or anything else you want to share."></textarea>
+    <div class="form-group">
+      <textarea id="additional-info" class="input-field" placeholder="Add a cover letter or anything else you want to share."></textarea>
     </div>
 
-    <button class="apply-button" id="submit-button">SUBMIT APPLICATION</button>
-    <button class="apply-button">APPLY WITH LINKEDIN</button>
+    <button class="button" id="submit-button">SUBMIT APPLICATION</button><br>
+    <button class="button">APPLY WITH LINKEDIN</button>
     <div class="linkedin-note">Your full LinkedIn profile will be shared with us.</div>
   </div>
 
